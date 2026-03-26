@@ -8,10 +8,6 @@ const helpObj = {
       "'projects'",
       "Maybe there's something interesting."
     ],
-    [
-      "'whoami'",
-      "A perplexing question."
-    ],
     ["'sudo'",
       "???"
     ],

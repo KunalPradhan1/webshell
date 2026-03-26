@@ -1,48 +1,53 @@
 {
   "ascii": [
-    "███████╗██╗  ██╗███████╗██╗     ██╗",
-    "██╔════╝██║  ██║██╔════╝██║     ██║",
-    "███████╗███████║█████╗  ██║     ██║",
-    "╚════██║██╔══██║██╔══╝  ██║     ██║",
-    "███████║██║  ██║███████╗███████╗███████╗",
-    "╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝"
-  ],
-  "title": "WebShell",
-  "username": "visitor",
-  "hostname": "webshell",
-  "password": "050823",
-  "repoLink": "https://github.com/nasan016/webshell",
+  "██╗  ██╗██╗   ██╗███╗   ██╗ █████╗ ██╗         ██████╗ ██████╗  █████╗ ██████╗ ██╗  ██╗ █████╗ ███╗   ██╗",
+  "██║ ██╔╝██║   ██║████╗  ██║██╔══██╗██║         ██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║  ██║██╔══██╗████╗  ██║",
+  "█████╔╝ ██║   ██║██╔██╗ ██║███████║██║         ██████╔╝██████╔╝███████║██║  ██║███████║███████║██╔██╗ ██║",
+  "██╔═██╗ ██║   ██║██║╚██╗██║██╔══██║██║         ██╔═══╝ ██╔══██╗██╔══██║██║  ██║██╔══██║██╔══██║██║╚██╗██║",
+  "██║  ██╗╚██████╔╝██║ ╚████║██║  ██║███████╗    ██║     ██║  ██║██║  ██║██████╔╝██║  ██║██║  ██║██║ ╚████║",
+  "╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝"
+],
+  "title": "Kunal's Terminal",
+  "username": "guest",
+  "hostname": "kunal.dev",
+  "password": "pass",
+  "repoLink": "https://github.com//KunalPradhan1",
   "social": {
-    "email": "your@email.com",
-    "github": "yourgithub",
-    "linkedin": "you"
+    "email": "kunal3421@gmail.com",
+    "github": "KunalPradhan1",
+    "linkedin": "kunal-pradhan3546"
   },
-  "aboutGreeting": "Hi stranger. Welcome to WebShell.",
+  "aboutGreeting": "Hi! My name is Kunal Pradhan feel free to check out my profiles or shoot me an email if you want to connect!",
   "projects": [
     [
-      "GofeR",
-      "Vue.js reactivity in Go.",
-      "https://github.com/nasan016/gofer"
+      "JSMGE",
+      "Browser Based Game Engine for developing online multiplayer games",
+      "https://github.com/venajustin/jsmge"
     ],
     [
-      "WebShell",
-      "Terminal styled website.",
-      "https://github.com/nasan016/webshell"
+      "formudle.one",
+      "A Daily Formula 1 driver guessing game",
+      "https://www.formudle.one/"
+    ],
+    [
+      "Pi 5 Home Lab",
+      "Currently Self-Hosting a NAS for use anywhere and Created a private VPN accesible anywhere in the world",
+      ""
     ]
   ],
   "colors": {
-    "background": "#0C0623",
-    "foreground": "#F8DDE5",
-    "banner": "#FF9951",
+    "background": "#000000",
+    "foreground": "#ffffff",
+    "banner": "#ffffff",
     "border": {
       "visible": true,
-      "color": "#FFADE2"
+      "color": "#63de21"
     },
     "prompt": {
-      "default": "#A5A7A7",
-      "user": "#FE6BC9",
-      "host": "#70FDFF",
-      "input": "#FF7685"
+      "default": "#ffffff",
+      "user": "#00ff8c",
+      "host": "#ffff33",
+      "input": "#ffffff"
     },
     "link": {
       "text": "#B6AAEE",
@@ -50,7 +55,7 @@
       "highlightText": "#0C0623"
     },
     "commands": {
-      "textColor": "#FD9BDB"
+      "textColor": "#66faff"
     }
   }
 }

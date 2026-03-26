@@ -28,7 +28,7 @@ const PRE_USER = document.getElementById("pre-user");
 const HOST = document.getElementById("host");
 const USER = document.getElementById("user");
 const PROMPT = document.getElementById("prompt");
-const COMMANDS = ["help", "about", "projects", "whoami", "repo", "banner", "clear"];
+const COMMANDS = ["help", "about", "projects", "repo", "banner", "clear"];
 const HISTORY : string[] = [];
 const SUDO_PASSWORD = command.password;
 const REPO_LINK = command.repoLink;
@@ -203,13 +203,6 @@ function commandHandler(input : string) {
       }
       writeLines(HELP);
       break;
-    case 'whoami':      
-      if(bareMode) {
-        writeLines([`${command.username}`, "<br>"])
-        break;
-      }
-      writeLines(createWhoami());
-      break;
     case 'about':
       if(bareMode) {
         writeLines(["Nothing to see here.", "<br>"])
@@ -340,6 +333,63 @@ function passwordHandler() {
   }
 }
 
+function matrix(){
+  const canvas = document.getElementById('Matrix') as HTMLCanvasElement;
+  const context = canvas.getContext('2d');
+  const main = document.getElementById('main');
+
+  if (!context) return;
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジモビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+  const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const nums = '0123456789';
+
+  const alphabet = katakana + latin + nums;
+  const fontSize = 16;
+  const columns = canvas.width/fontSize;
+
+  const rainDrops: string | any[] = [];
+  for(let x = 0; x < columns; x++){
+    rainDrops[x] = Math.floor(Math.random() * 32) - 30;
+  }
+
+  const draw = () => {
+    context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    
+    context.fillStyle = '#0F0';
+    context.font = fontSize + 'px monospace';
+
+    let allFallen = true;
+
+    for(let i = 0; i < rainDrops.length; i++) {
+      const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+      context.fillText(text, i*fontSize, rainDrops[i]*fontSize);
+      
+      rainDrops[i]++;
+      
+      // Check if any raindrop is still on screen
+      if(rainDrops[i]*fontSize < canvas.height) {
+        allFallen = false;
+      }
+    }
+
+    // If all raindrops have fallen off screen, stop animation
+    if(allFallen) {
+      clearInterval(animationInterval);
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      canvas.style.display = 'none';
+      if (main) main.classList.add('show');
+      writeLines(BANNER);
+    }
+  };
+
+  const animationInterval = setInterval(draw, 30);
+}
+
 function easterEggStyles() {   
   const bars = document.getElementById("bars");
   const body = document.body;
@@ -387,7 +437,7 @@ const initEventListeners = () => {
   } 
 
     window.addEventListener('load', () => {
-    writeLines(BANNER);
+    matrix();
   });
   
   USERINPUT.addEventListener('keypress', userInputHandler);

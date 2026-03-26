@@ -8,10 +8,11 @@ const createAbout = () : string[] => {
   const EMAIL = "Email";
   const GITHUB = "Github";
   const LINKEDIN = "Linkedin";
-  
+  const RESUME = "Resume";
   const email = `<i class='fa-solid fa-envelope'></i> ${EMAIL}`;   
   const github = `<i class='fa-brands fa-github'></i> ${GITHUB}`;
   const linkedin = `<i class='fa-brands fa-linkedin'></i> ${LINKEDIN}`;
+  const resume = `<i class='fa-solid fa-file-pdf'></i> ${RESUME}`;
   let string = "";
 
   about.push("<br>");
@@ -35,6 +36,13 @@ const createAbout = () : string[] => {
   string += linkedin;
   string += SPACE.repeat(17 - LINKEDIN.length);  
   string += `<a target='_blank' href='https://www.linkedin.com/in/${command.social.linkedin}'>linkedin/${command.social.linkedin}</a>`;
+  about.push(string);3
+
+  string = '';
+  string += SPACE.repeat(2);
+  string += resume;
+  string += SPACE.repeat(17 - RESUME.length);  
+  string += "<a href='/res/Kunal-Pradhan-Resume.pdf' download='Kunal-Pradhan-Resume.pdf'>Download Resume</a>";
   about.push(string);
 
   about.push("<br>");
